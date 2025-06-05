@@ -1,32 +1,70 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-
-
 const Sidebar = () => {
-    const isMenuOpen = useSelector((store)=> store.app.isMenuOpen);
-    if(!isMenuOpen) return null;
+  const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
+
+  if (!isMenuOpen) return null;
+
   return (
-    <div className="p-16 shadow-lg w-48">
-      <ul>
-       <li> <a href="/" >Home</a></li> 
-        <li>Shorts</li>
-        <li>Videos</li>
-        <li>Live</li>
+    <div className="w-60 p-6 shadow-lg bg-white min-h-screen text-gray-800">
+      {/* Main Menu */}
+      <ul className="space-y-2">
+        <li>
+          <a
+            href="/"
+            className="block px-2 py-1 rounded hover:bg-gray-100 transition"
+          >
+            🏠 Home
+          </a>
+        </li>
+        <li className="px-2 py-1 hover:bg-gray-100 rounded transition">
+          🎬 Shorts
+        </li>
+        <li className="px-2 py-1 hover:bg-gray-100 rounded transition">
+          📹 Videos
+        </li>
+        <li className="px-2 py-1 hover:bg-gray-100 rounded transition">
+          🔴 Live
+        </li>
       </ul>
-      <h1 className="font-bold pt-5">Subscriptions</h1>
-      <ul>
-        <li>Music</li>
-        <li>Sports</li>
-        <li>Gaming</li>
-        <li>Movies</li>
+
+      {/* Subscriptions */}
+      <h2 className="mt-6 mb-2 font-semibold text-gray-700 border-b pb-1">
+        Subscriptions
+      </h2>
+      <ul className="space-y-2">
+        <li className="px-2 py-1 hover:bg-gray-100 rounded transition">
+          🎵 Music
+        </li>
+        <li className="px-2 py-1 hover:bg-gray-100 rounded transition">
+          🏀 Sports
+        </li>
+        <li className="px-2 py-1 hover:bg-gray-100 rounded transition">
+          🎮 Gaming
+        </li>
+        <li className="px-2 py-1 hover:bg-gray-100 rounded transition">
+          🎥 Movies
+        </li>
       </ul>
-      <h1 className="font-bold pt-5">Watch Later</h1>
-      <ul>
-        <li>Music</li>
-        <li>Sports</li>
-        <li>Gaming</li>
-        <li>Movies</li>
+
+      {/* Watch Later */}
+      <h2 className="mt-6 mb-2 font-semibold text-gray-700 border-b pb-1">
+        Watch Later
+      </h2>
+      <ul className="space-y-2">
+        <li className="px-2 py-1 hover:bg-gray-100 rounded transition">
+          🎵 Music
+        </li>
+        <li className="px-2 py-1 hover:bg-gray-100 rounded transition">
+          🏀 Sports
+        </li>
+        <li className="px-2 py-1 hover:bg-gray-100 rounded transition">
+          🎮 Gaming
+        </li>
+        <li className="px-2 py-1 hover:bg-gray-100 rounded transition">
+          🎥 Movies
+        </li>
       </ul>
     </div>
   );
